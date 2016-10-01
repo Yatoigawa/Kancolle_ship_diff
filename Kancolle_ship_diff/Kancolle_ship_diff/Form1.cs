@@ -16,5 +16,10 @@ namespace Kancolle_ship_diff
         {
             InitializeComponent();
         }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
