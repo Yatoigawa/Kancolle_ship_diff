@@ -28,15 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
+            "a",
+            "a",
+            "i"}, -1);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ファイルToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.設定ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.終了ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.表示ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.column_shipName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.column_shipType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.column_torpedo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,12 +85,10 @@
             // listView1
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1});
+            this.column_shipName,
+            this.column_shipType,
+            this.column_torpedo});
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            listViewGroup1.Header = "";
-            listViewGroup1.Name = "list_shipName";
-            listViewGroup1.Tag = "艦名";
-            listViewItem1.Group = listViewGroup1;
             listViewItem1.StateImageIndex = 0;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1});
@@ -98,9 +100,17 @@
             this.listView1.View = System.Windows.Forms.View.Details;
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
-            // columnHeader1
+            // column_shipName
             // 
-            this.columnHeader1.Text = "艦名";
+            this.column_shipName.Text = "艦名";
+            // 
+            // column_shipType
+            // 
+            this.column_shipType.Text = "艦種";
+            // 
+            // column_torpedo
+            // 
+            this.column_torpedo.Text = "雷装";
             // 
             // Form1
             // 
@@ -127,7 +137,9 @@
         private System.Windows.Forms.ToolStripMenuItem 終了ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 表示ToolStripMenuItem;
         private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader column_shipName;
+        private System.Windows.Forms.ColumnHeader column_shipType;
+        private System.Windows.Forms.ColumnHeader column_torpedo;
     }
 }
 
