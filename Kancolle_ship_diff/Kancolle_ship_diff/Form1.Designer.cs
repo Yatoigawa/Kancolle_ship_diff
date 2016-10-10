@@ -1,5 +1,13 @@
-﻿namespace Kancolle_ship_diff
+﻿using System.Windows.Forms;
+
+
+namespace Kancolle_ship_diff
 {
+    /// <summary>
+    /// 定数値の定義
+    /// </summary>
+    
+
     partial class Form1
     {
         /// <summary>
@@ -20,27 +28,24 @@
             base.Dispose(disposing);
         }
 
-        #region Windows フォーム デザイナーで生成されたコード
+        static class Defines
+        {
+            public const int FORM_WIDTH_SIZE = 500;
+            public const int FORM_HEIGHT_SIZE = 400;
+            public const int STRIP_SIZE = 24;
+        }
 
         /// <summary>
-        /// デザイナー サポートに必要なメソッドです。このメソッドの内容を
-        /// コード エディターで変更しないでください。
+        /// 初期設定
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
-            "a",
-            "a",
-            "i"}, -1);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ファイルToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.設定ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.終了ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.表示ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.column_shipName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.column_shipType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.column_torpedo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +56,7 @@
             this.表示ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(284, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(Defines.FORM_WIDTH_SIZE, Defines.STRIP_SIZE);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -67,13 +72,13 @@
             // 設定ToolStripMenuItem
             // 
             this.設定ToolStripMenuItem.Name = "設定ToolStripMenuItem";
-            this.設定ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.設定ToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
             this.設定ToolStripMenuItem.Text = "設定";
             // 
             // 終了ToolStripMenuItem
             // 
             this.終了ToolStripMenuItem.Name = "終了ToolStripMenuItem";
-            this.終了ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.終了ToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
             this.終了ToolStripMenuItem.Text = "終了";
             // 
             // 表示ToolStripMenuItem
@@ -84,39 +89,20 @@
             // 
             // listView1
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.column_shipName,
-            this.column_shipType,
-            this.column_torpedo});
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            listViewItem1.StateImageIndex = 0;
-            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
             this.listView1.Location = new System.Drawing.Point(0, 24);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(284, 237);
+            this.listView1.Size = new System.Drawing.Size(Defines.FORM_WIDTH_SIZE, Defines.FORM_HEIGHT_SIZE - Defines.STRIP_SIZE);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
-            // column_shipName
-            // 
-            this.column_shipName.Text = "艦名";
-            // 
-            // column_shipType
-            // 
-            this.column_shipType.Text = "艦種";
-            // 
-            // column_torpedo
-            // 
-            this.column_torpedo.Text = "雷装";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(Defines.FORM_WIDTH_SIZE, Defines.FORM_HEIGHT_SIZE);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -129,17 +115,15 @@
 
         }
 
-        #endregion
-
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem ファイルToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 設定ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 終了ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 表示ToolStripMenuItem;
         private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader column_shipName;
-        private System.Windows.Forms.ColumnHeader column_shipType;
-        private System.Windows.Forms.ColumnHeader column_torpedo;
+
+
+
     }
 }
 
