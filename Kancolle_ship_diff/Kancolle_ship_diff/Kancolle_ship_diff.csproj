@@ -52,6 +52,7 @@
     <Compile Include="CsvView.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="defines.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

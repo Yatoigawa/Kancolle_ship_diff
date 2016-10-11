@@ -2,6 +2,7 @@
 using System.Collections;
 using System.IO;
 using System.Windows.Forms;
+using System.Text;
 
 public class CsvView : ListView
 {
@@ -11,7 +12,7 @@ public class CsvView : ListView
         /// <summary>
         /// CSVファイルからの読み込み
         /// </summary>
-        StreamReader srInf = new StreamReader(@"ship_data.csv");
+        StreamReader srInf = new StreamReader(@"ship_data.csv", Encoding.Default);
 
         while (srInf.Peek() >= 0)
         {

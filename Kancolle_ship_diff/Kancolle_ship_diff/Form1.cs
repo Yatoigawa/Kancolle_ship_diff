@@ -19,12 +19,19 @@ namespace Kancolle_ship_diff
         {
             InitializeComponent();
 
+            int FORM_WIDTH_SIZE = 500;
+            int FORM_HEIGHT_SIZE = 400 - 24;
             CsvView csvView = new CsvView()
             {
+                Width = FORM_WIDTH_SIZE,
+                Height = FORM_HEIGHT_SIZE,
                 GridLines = true,
                 View = View.Details,
-                Dock = DockStyle.Fill,
+                Dock = DockStyle.Bottom,
             };
+            this.Controls.Add(csvView);
+            csvView.Items[1].Focused = true;
+            csvView.Select();
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
