@@ -6,7 +6,7 @@ namespace Kancolle_ship_diff
     /// <summary>
     /// 定数値の定義
     /// </summary>
-    
+
 
     partial class Form1
     {
@@ -38,7 +38,7 @@ namespace Kancolle_ship_diff
             this.設定ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.終了ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.表示ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            //this.listView1 = new System.Windows.Forms.ListView();
+            this.csvView = new CsvView();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,24 +79,26 @@ namespace Kancolle_ship_diff
             this.表示ToolStripMenuItem.Name = "表示ToolStripMenuItem";
             this.表示ToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
             this.表示ToolStripMenuItem.Text = "表示";
-            // 
-            // listView1
-            // 
-            //this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            //this.listView1.Location = new System.Drawing.Point(0, 24);
-            //this.listView1.Name = "listView1";
-            //this.listView1.Size = new System.Drawing.Size(Defines.FORM_WIDTH_SIZE, Defines.FORM_HEIGHT_SIZE - Defines.STRIP_SIZE);
-            //this.listView1.TabIndex = 1;
-            //this.listView1.UseCompatibleStateImageBehavior = false;
-            //this.listView1.View = System.Windows.Forms.View.Details;
-            //this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            //
+            // csvView
+            //
+            this.csvView.Dock = DockStyle.Bottom;
+            this.csvView.Location = new System.Drawing.Point(0, 24);
+            this.csvView.Name = "csvView";
+            this.csvView.Size = new System.Drawing.Size(Defines.FORM_WIDTH_SIZE, Defines.FORM_HEIGHT_SIZE - Defines.STRIP_SIZE);
+            this.csvView.TabIndex = 1;
+            this.csvView.UseCompatibleStateImageBehavior = false;
+            this.csvView.GridLines = true;
+            this.csvView.View = System.Windows.Forms.View.Details;
+            this.csvView.SelectedIndexChanged += new System.EventHandler(this.csvView_SelectedIndexChanged);
+            this.csvView.SortStyle = CSortableListViewLib.SortableListView.SortStyles.SortSelectedColumn;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(Defines.FORM_WIDTH_SIZE, Defines.FORM_HEIGHT_SIZE);
-            // this.Controls.Add(this.listView1);
+            this.Controls.Add(this.csvView);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
@@ -113,9 +115,8 @@ namespace Kancolle_ship_diff
         private System.Windows.Forms.ToolStripMenuItem 設定ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 終了ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 表示ToolStripMenuItem;
-        private System.Windows.Forms.ListView listView1;
-
-
+        private CSortableListViewLib.SortableListView csvView;
+        // private System.Windows.Forms.ListView ;
 
     }
 }
