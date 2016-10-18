@@ -3,8 +3,9 @@ using System.Collections;
 using System.IO;
 using System.Windows.Forms;
 using System.Text;
+using CSortableListViewLib;
 
-public class CsvView : ListView
+public class CsvView : SortableListView
 {
 	public CsvView()
 	{
