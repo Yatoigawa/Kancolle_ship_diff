@@ -49,7 +49,7 @@ namespace Kancolle_ship_diff
             this.表示ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(Defines.FORM_WIDTH_SIZE, Defines.STRIP_SIZE);
+            this.menuStrip1.Size = new System.Drawing.Size(500, 400);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -85,7 +85,7 @@ namespace Kancolle_ship_diff
             this.csvView.Dock = DockStyle.Bottom;
             this.csvView.Location = new System.Drawing.Point(0, 24);
             this.csvView.Name = "csvView";
-            this.csvView.Size = new System.Drawing.Size(Defines.FORM_WIDTH_SIZE, Defines.FORM_HEIGHT_SIZE - Defines.STRIP_SIZE);
+            this.csvView.Size = new System.Drawing.Size(500, 376);
             this.csvView.TabIndex = 1;
             this.csvView.UseCompatibleStateImageBehavior = false;
             this.csvView.GridLines = true;
@@ -97,7 +97,7 @@ namespace Kancolle_ship_diff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(Defines.FORM_WIDTH_SIZE, Defines.FORM_HEIGHT_SIZE);
+            this.ClientSize = new System.Drawing.Size(500, 400);
             this.Controls.Add(this.csvView);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -108,6 +108,7 @@ namespace Kancolle_ship_diff
             this.ResumeLayout(false);
             this.PerformLayout();
 
+
         }
 
         private System.Windows.Forms.MenuStrip menuStrip1;
@@ -115,7 +116,7 @@ namespace Kancolle_ship_diff
         private System.Windows.Forms.ToolStripMenuItem 設定ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 終了ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 表示ToolStripMenuItem;
-        private CSortableListViewLib.SortableListView csvView;
+        private CsvView csvView;
         // private System.Windows.Forms.ListView ;
 
     }

@@ -27,6 +27,7 @@ namespace Kancolle_ship_diff
 
         private void csvView_SelectedIndexChanged(object sender, EventArgs e)
         {
+
             csvView.Sort();
         }
 
