@@ -25,7 +25,10 @@ namespace Kancolle_ship_diff
         private void 艦種ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form2 frm = new Form2();
-            frm.Show();
+            if (System.Windows.Forms.DialogResult.OK == frm.ShowDialog())
+            {
+
+            }
         }
     }
 }
