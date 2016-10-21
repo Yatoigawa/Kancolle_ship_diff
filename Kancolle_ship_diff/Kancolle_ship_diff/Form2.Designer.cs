@@ -69,6 +69,7 @@
             // 
             // shipTypeListView
             // 
+            this.shipTypeListView.CheckBoxes = true;
             this.shipTypeListView.Location = new System.Drawing.Point(161, 0);
             this.shipTypeListView.Name = "shipTypeListView";
             this.shipTypeListView.Size = new System.Drawing.Size(163, 258);
