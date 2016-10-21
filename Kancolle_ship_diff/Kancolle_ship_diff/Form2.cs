@@ -51,8 +51,6 @@ namespace Kancolle_ship_diff
                 item_shipClassList.Text = shipClassList[i];
                 shipClassListView.Items.Add(item_shipClassList);
             }
-
-
         }
 
         private void buttonOK_Click(object sender, EventArgs e)
@@ -86,11 +84,70 @@ namespace Kancolle_ship_diff
                 idx = shipClassListView.SelectedItems[0].Text;
 
                 // 現在表示されているリストビューの項目の総数を取得
-                int shipTypeList_max  = shipTypeListView.Items.Count;
+                int shipTypeList_max = shipTypeListView.Items.Count;
+
+                // アイテム削除前にデータを格納
+
+
+                // 現在のアイテムを削除
+                shipTypeListView.Items.Clear();
+                /*
                 for (int i = 0; i < shipTypeList_max; i++)
                 {
-
+                    ListViewItem item_shipClassList = new ListViewItem();
+                    shipTypeListView.Items.Remove(item_shipClassList);
                 }
+                */
+
+                // 選択された項目についてリストビューアイテムを追加
+                switch (idx) {
+                    case "戦艦/航空戦艦" :
+                        SelectedShipTypeToListView(shipTypeList.BattleShipType);
+                        break;
+
+                    case "正規空母/装甲空母" :
+                        SelectedShipTypeToListView(shipTypeList.StandardAircraftCarrierType);
+                        break;
+
+                    case "軽空母" :
+                        SelectedShipTypeToListView(shipTypeList.LightAircraftCarrierType);
+                        break;
+
+                    case "重巡洋艦/航空巡洋艦":
+                        SelectedShipTypeToListView(shipTypeList.HeavyCruiserType);
+                        break;
+
+                    default:
+                        break;
+                }
+            }
+        }
+
+
+
+        private void SelectedShipTypeSave(string shipClass, string[] shipTypeData)
+        {
+            switch (shipClass)
+            {
+                case "戦艦/航空戦艦":
+                    for (int i = 0; i < shipTypeList.BattleShipType.Length; i++)
+                    {
+
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void SelectedShipTypeToListView(string[] TypeList)
+        {
+            for (int i = 0; i < TypeList.Length; i++)
+            {
+                ListViewItem item_shipTypeList = new ListViewItem();
+
+                item_shipTypeList.Text = TypeList[i];
+                shipTypeListView.Items.Add(item_shipTypeList);
             }
         }
     }
