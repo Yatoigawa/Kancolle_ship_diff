@@ -13,7 +13,7 @@ namespace Kancolle_ship_diff
         // 戦艦(Battleship : BB)
         // 高速戦艦(Fast Battleship : FBB)
         // 航空戦艦(Avitation Battleship : BBV)
-        public string[] BattleShipType =
+        public static string[] BattleShipType =
         {
             "扶桑型",
             "伊勢型",
@@ -28,7 +28,7 @@ namespace Kancolle_ship_diff
 
         // 正規空母(Standard Aircraft Carrier : CV)
         // 装甲空母(Armored Aircraft Carrier : CVB)
-        public string[] StandardAircraftCarrierType =
+        public static string[] StandardAircraftCarrierType =
         {
             "赤城型",
             "加賀型",
@@ -42,7 +42,7 @@ namespace Kancolle_ship_diff
         };
 
         // 軽空母(Light Aircraft Carrier : CVL)
-        public string[] LightAircraftCarrierType =
+        public static string[] LightAircraftCarrierType =
         {
             "祥鳳型",
             "飛鷹型",
@@ -54,7 +54,7 @@ namespace Kancolle_ship_diff
 
         // 重巡洋艦(Heavy Cruiser : CA)
         // 航空巡洋艦(Avitation Cruiser : CAV)
-        public string[] HeavyCruiserType =
+        public static string[] HeavyCruiserType =
         {
             "古鷹型",
             "青葉型",
@@ -67,13 +67,13 @@ namespace Kancolle_ship_diff
         };
 
         // 重雷装巡洋艦(Torpedo Cruiser : CLT)
-        public string[] TorpedoCruiserType =
+        public static string[] TorpedoCruiserType =
         {
             "球磨型"
         };
 
         // 軽巡洋艦(Light Cruiser : CL)
-        public string[] LightCruiserType =
+        public static string[] LightCruiserType =
         {
             "長良型",
             "球磨型",
@@ -85,7 +85,7 @@ namespace Kancolle_ship_diff
         };
 
         // 駆逐艦(Destroyer : DD)
-        public string[] DestroyerType =
+        public static string[] DestroyerType =
         {
             "睦月型",
             "吹雪型",
