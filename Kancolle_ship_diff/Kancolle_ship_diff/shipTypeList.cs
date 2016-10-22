@@ -103,5 +103,17 @@ namespace Kancolle_ship_diff
             "神風型"
         };
 
+        // 潜水艦(Submarine : SS)
+        // 潜水空母(submarine Aircraft Carrier : SSV)
+        public static string[] SubmarineType =
+        {
+            "海大Ⅵ型(伊168)",
+            "巡潜乙型改二(伊58)",
+            "巡潜3型(伊8)",
+            "潜特型(伊400型潜水艦)",
+            "三式潜航輸送艇(まるゆ)",
+            "巡潜乙型(伊19、伊26)",
+            "UボートⅨC型(U-511、呂500)"
+        };
     }
 }
