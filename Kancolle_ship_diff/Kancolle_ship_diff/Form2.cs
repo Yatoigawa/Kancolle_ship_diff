@@ -117,6 +117,30 @@ namespace Kancolle_ship_diff
                         SelectedShipTypeToListView(shipTypeList.HeavyCruiserType);
                         break;
 
+                    case "重雷装巡洋艦":
+                        SelectedShipTypeToListView(shipTypeList.TorpedoCruiserType);
+                        break;
+
+                    case "軽巡洋艦":
+                        SelectedShipTypeToListView(shipTypeList.LightCruiserType);
+                        break;
+
+                    case "駆逐艦":
+                        SelectedShipTypeToListView(shipTypeList.DestroyerType);
+                        break;
+
+                    case "潜水艦/潜水空母":
+                        SelectedShipTypeToListView(shipTypeList.SubmarineType);
+                        break;
+
+                    /*
+                    "補給艦",
+                    "水上機母艦",
+                    "揚陸艦",
+                    "工作艦",
+                    "潜水母艦",
+                    "練習巡洋艦"
+                    */
                     default:
                         break;
                 }
