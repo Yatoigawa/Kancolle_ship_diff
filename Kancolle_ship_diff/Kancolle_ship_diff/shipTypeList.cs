@@ -104,7 +104,7 @@ namespace Kancolle_ship_diff
         };
 
         // 潜水艦(Submarine : SS)
-        // 潜水空母(submarine Aircraft Carrier : SSV)
+        // 潜水空母(Submarine Aircraft Carrier : SSV)
         public static string[] SubmarineType =
         {
             "海大Ⅵ型(伊168)",
@@ -114,6 +114,20 @@ namespace Kancolle_ship_diff
             "三式潜航輸送艇(まるゆ)",
             "巡潜乙型(伊19、伊26)",
             "UボートⅨC型(U-511、呂500)"
+        };
+
+        // 補給艦(Fleet Oiler : AO)
+        public static string[] FleetOilerType =
+        {
+            "改風早型"
+        };
+
+        // 水上機母艦(Seeplane Tender : AV)
+        public static string[] SeaplaneTendertype =
+        {
+            "千歳型",
+            "秋津洲型",
+            "瑞穂型"
         };
     }
 }
