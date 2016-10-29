@@ -133,14 +133,30 @@ namespace Kancolle_ship_diff
                         SelectedShipTypeToListView(shipTypeList.SubmarineType);
                         break;
 
-                    /*
-                    "補給艦",
-                    "水上機母艦",
-                    "揚陸艦",
-                    "工作艦",
-                    "潜水母艦",
-                    "練習巡洋艦"
-                    */
+                    case "補給艦":
+                        SelectedShipTypeToListView(shipTypeList.FleetOilerType);
+                        break;
+
+                    case "水上機母艦":
+                        SelectedShipTypeToListView(shipTypeList.SeaplaneTenderType);
+                        break;
+
+                    case "揚陸艦":
+                        SelectedShipTypeToListView(shipTypeList.AmphibiousAssultShipType);
+                        break;
+
+                    case "工作艦":
+                        SelectedShipTypeToListView(shipTypeList.RepairShipType);
+                        break;
+
+                    case "潜水母艦":
+                        SelectedShipTypeToListView(shipTypeList.SubmarineTenderType);
+                        break;
+
+                    case "練習巡洋艦":
+                        SelectedShipTypeToListView(shipTypeList.TrainingCruiserType);
+                        break;
+
                     default:
                         break;
                 }
