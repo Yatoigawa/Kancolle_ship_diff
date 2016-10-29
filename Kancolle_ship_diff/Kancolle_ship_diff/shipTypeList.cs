@@ -123,11 +123,35 @@ namespace Kancolle_ship_diff
         };
 
         // 水上機母艦(Seeplane Tender : AV)
-        public static string[] SeaplaneTendertype =
+        public static string[] SeaplaneTenderType =
         {
             "千歳型",
             "秋津洲型",
             "瑞穂型"
+        };
+
+        // 揚陸艦(AmphibiousAssaultShip : LHA)
+        public static string[] AmphibiousAssultShipType =
+        {
+            "特種船丙型"
+        };
+
+        // 工作艦(RepairShip : AR)
+        public static string[] RepairShipType =
+        {
+            "工作艦"
+        };
+
+        // 潜水母艦(Submarine Tender : AS)
+        public static string[] SubmarineTenderType =
+        {
+            "大鯨型"
+        };
+
+        // 練習巡洋艦(Training Cruiser : ??)
+        public static string[] TrainingCruiserType =
+        {
+            "香取型"
         };
     }
 }
