@@ -167,17 +167,18 @@ namespace Kancolle_ship_diff
 
         private void SelectedShipTypeSave(string shipClass, string[] shipTypeData)
         {
-            switch (shipClass)
+            foreach (ListViewItem itemx in shipTypeListView.CheckedItems)
             {
-                case "戦艦/航空戦艦":
-                    for (int i = 0; i < shipTypeList.BattleShipType.Length; i++)
-                    {
+                switch (shipClass)
+                {
+                    case "戦艦/航空戦艦":
 
-                    }
-                    break;
-                default:
-                    break;
+                        break;
+                    default:
+                        break;
+                }
             }
+            
         }
 
         private void SelectedShipTypeToListView(string[] TypeList)
